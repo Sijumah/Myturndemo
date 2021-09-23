@@ -1,3 +1,5 @@
+#pragma once
+
 #include "declarations.hpp"
 #include <string>
 
@@ -5,6 +7,7 @@
 
 struct gear: public card{
 
+bool isactive=0;
 gear(const std::string& supname, const unsigned int& supmanacost, const std::string& supdescription):
 card(supname,supmanacost,supdescription){};
 

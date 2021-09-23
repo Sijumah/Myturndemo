@@ -1,18 +1,48 @@
+#pragma once
+
+
 #include "declarations.hpp"
 
+struct ice_scroll:public card{
+
+ice_scroll():card("Ice Scroll",3,"Deal 20 Ice Damage; chant."){};
+
+void onplay(gamestate*){};
+
+
+};
+
+struct fire_scroll:public card{
+
+fire_scroll():card("Fire Scroll",3,"Deal 20 fire damage; chant."){};
+
+void onplay(gamestate*){};
+
+
+};
+
+struct lightning_scroll:public card{
+
+lightning_scroll():card("Lightning Scroll",3,"Deal 20 damage to all enemies; chant."){};
+
+void onplay(gamestate*){};
+
+
+};
+
+struct emenation:public card{
+
+emenation():card("Emenation",0,"Increase your atack by 1 and add 3 different element scrolls to your hand. Reduce their cost to 0."){};
+
+void onplay(gamestate*){};
+
+
+};
 
 
 
 struct apprentice: public hero{
 
-
-
-/*ice scroll 17 frost damage chant
-(level 14)
-flame scroll 17 fire damage chant
-3 lightening scroll 17 damage to all chant 
-
-ex emanation increase  your attack by 1 add 3 differen telement scrolls to your hand reduce their cost to 0
-
-*/
+apprentice():hero(std::deque<card>{fire_scroll{},ice_scroll{},lightning_scroll{}},50,emenation{},3,10){};
 };
+

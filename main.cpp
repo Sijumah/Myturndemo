@@ -1,4 +1,4 @@
-
+#pragma once 
 //started at 12:30
 
 #include <string>
@@ -6,7 +6,7 @@
 #include <array>
 
 #include "declarations.hpp"
-struct status_eff{};
+
 
 struct deck{
 
@@ -31,7 +31,7 @@ deck player_deck;
 
 int main(){
 
-
+//assign gear
 
 
 
