@@ -2,7 +2,7 @@
 
 #include "declarations.hpp"
 #include <string>
-
+#include "gamestate.hpp"
 
 
 struct defensive_stance:public card{
@@ -12,6 +12,8 @@ defensive_stance():card("Defensive Stance",0,"Taunt. Draw a card."){};
 
 virtual void onplay(gamestate* gamestatee){};
 virtual void onturnend(gamestate* gamestatee){};
+
+
 };
 
 struct shield_block:public card{
@@ -43,7 +45,7 @@ defensive_stance card1;
 shield_block card2;
 
 squire():hero(std::deque<card>{hero_attack{},hero_attack{},defensive_stance{},shield_block{},overpower_strike{}},
-100,heroic_charge{},1,10
+100,heroic_charge{}
 
 ){};
 

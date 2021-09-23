@@ -2,6 +2,7 @@
 
 
 #include "declarations.hpp"
+#include "gamestate.hpp"
 
 struct ice_scroll:public card{
 
@@ -43,6 +44,6 @@ void onplay(gamestate*){};
 
 struct apprentice: public hero{
 
-apprentice():hero(std::deque<card>{fire_scroll{},ice_scroll{},lightning_scroll{}},50,emenation{},3,10){};
+apprentice():hero(std::deque<card>{hero_attack{},hero_attack{},fire_scroll{},ice_scroll{},lightning_scroll{}},50,emenation{}){};
 };
 

@@ -2,7 +2,7 @@
 
 
 #include "declarations.hpp"
-
+#include "gamestate.hpp"
 
 struct frostfire_shot:public card{
 
@@ -35,7 +35,7 @@ fatal_shot():card("Fatal Shot",0,"Deal 60 damage, gain 30 energy."){};
 
 struct markswoman: public hero{
 
-markswoman():hero(std::deque<card>{frostfire_shot{},multiple_shots{},aimed_shot{}},60,fatal_shot{},2,10){};
+markswoman():hero(std::deque<card>{hero_attack{},hero_attack{},frostfire_shot{},multiple_shots{},aimed_shot{}},60,fatal_shot{}){};
 
 
 };

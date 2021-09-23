@@ -8,22 +8,6 @@
 #include "declarations.hpp"
 
 
-struct deck{
-
-std::deque<card*> active_cards; 
-std::deque<card*> inactive_cards;
-std::array<hero,4> heroes;
-
-
-};
-
-struct player{
-
-std::string name;
-deck player_deck;
-
-};
-
 
 
 
@@ -32,9 +16,12 @@ deck player_deck;
 int main(){
 
 //assign gear
+//set hero position
+//assign hero level
 
 
 
+//handle "finishing delay damage"
 
 return 0;
 

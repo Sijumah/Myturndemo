@@ -1,7 +1,7 @@
 #pragma once
 
 #include "declarations.hpp"
-
+#include "gamestate.hpp"
 
 struct healing_spell:public card{
 
@@ -40,5 +40,5 @@ holy_redemption():card("Holy Redemption",0,"Resurrect an ally and restore 56 hea
 
 struct priestess: public hero{
 
-priestess():hero(std::deque<card>{healing_spell{},cleansing_touch{},prayer_of_healing{}},50,holy_redemption{},4,10){};
+priestess():hero(std::deque<card>{hero_attack{},hero_attack{},healing_spell{},cleansing_touch{},prayer_of_healing{}},50,holy_redemption{}){};
 };

@@ -1,6 +1,7 @@
 #include "declarations.hpp"
 #include <string>
-
+#include "gamestate.hpp"
+#include "event.hpp"
 
 
 
